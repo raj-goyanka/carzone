@@ -138,8 +138,8 @@
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay" style="z-index: 3;margin-top:20px">x</span>
     
     <div class="overlay-content">
-      <form action="/action_page.php">
-        <input type="text" placeholder="type keyword(s) here. Eg: audi, benz etc" name="search">
+      <form action="{% url 'search' %}">
+        <input type="text" placeholder="type keyword(s) here. Eg: audi, benz etc" name="keyword">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
@@ -159,6 +159,7 @@
       document.getElementById("feacar").style.display="none";
       document.getElementById("myteam").style.display="none";
       document.getElementById("lcar").style.display="none";
+     
     }
     
     function closeSearch() {
@@ -167,6 +168,8 @@
       document.getElementById("feacar").style.display="block";
       document.getElementById("myteam").style.display="block";
       document.getElementById("lcar").style.display="block";
+      
+     
     }
     
 </script>
